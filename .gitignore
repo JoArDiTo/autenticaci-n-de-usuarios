@@ -1,0 +1,32 @@
+# Carpeta de dependencias
+/node_modules
+
+# Archivos de compilación
+/dist
+
+# Archivos de configuración local
+/.env
+
+# Archivos de registro
+/logs
+
+# Archivos de respaldo
+*.bak
+
+# Archivos de caché
+*.cache
+
+# Archivos de compilación de TypeScript
+*.js.map
+
+# Archivos de configuración de IDE
+.vscode/
+.idea/
+
+# Archivos de respaldo de Visual Studio
+*.suo
+*.user
+*.sln.docstates
+
+# Bases de datos
+*.sqlite

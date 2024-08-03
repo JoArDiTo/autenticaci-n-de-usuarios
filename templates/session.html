@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sesión iniciada</h1>
+    <spam>Información del usuario</spam>
+    <p>ERROR:matate</p>
+    <button onclick="logout()">SALIR</button>
+</body>
+<script>
+    fetch('http://localhost:3000/api/users/protected', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        credentials: 'include',
+    }).then(response => response.json())
+    .then(data => {
+        console.log(data);
+        document.querySelector('p').textContent = data.username;
+        if (data.error) {
+            window.alert(data.error);
+            window.location.href = './index.html';
+        }
+    });
+
+    function logout() {
+        fetch('http://localhost:3000/api/users/logout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include',
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            window.location.href = './index.html';
+        })
+    }
+</script>
+</script>
+</html>
