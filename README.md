@@ -10,7 +10,7 @@ Para instalar el proyecto, sigue estos pasos:
 
 1. Clona el repositorio: 
 ```bash
-git clone
+git clone git@github.com:JoArDiTo/autenticacion-de-usuarios.git
 ```
 
 2. Instala las dependencias: `npm install`
